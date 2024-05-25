@@ -14,4 +14,7 @@ public interface UserRepository extends JpaRepository<User, String> {
 	@Query("SELECT u.name FROM User u ORDER BY u.name ASC")
 	public List<String> getUserNames();
 
+	@Query("FROM User u WHERE u.email = :email")
+	public User getUserByEmail(String email);
+
 }

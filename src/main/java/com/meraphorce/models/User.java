@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 import com.meraphorce.controllers.pojos.UserRequest;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -22,8 +23,10 @@ public class User implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	@Id
+	@Column(unique = true)
 	private String id;
 	private String name;
+	@Column(unique = true)
 	private String email;
 
 	public User(UserRequest userRequest) {
