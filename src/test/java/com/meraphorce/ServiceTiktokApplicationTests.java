@@ -1,11 +1,14 @@
 package com.meraphorce;
 
+import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class ServiceTiktokApplicationTests {
 
-	// Unimplemented Yet
-	//@Test
+	@Test
+	public void ApiTest() {
+
+	}
 
 }
